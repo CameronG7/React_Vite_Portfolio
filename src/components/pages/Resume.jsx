@@ -1,5 +1,14 @@
 import React from 'react';
 
+const handleDownload = () => {
+	console.log('clicked handleDownload');
+};
+
+const handleView = () => {	
+	console.log('clicked handleView');
+};
+
+
 export const Resume = () => {
 	return (
 		<div className="prose mx-auto my-2 ">

@@ -39,6 +39,25 @@
   padding: 2em;
 }
 
+.cardHidden {
+  opacity: 0;
+  filter: blur(5px);
+  transform: translateX(-100%);
+  transition: transform 1s, filter 1s, opacity 0.5s ; 
+}
+
+.cardShow {
+  opacity: 1;
+  filter: blur(0);
+  transform: translateX(0);
+  transition: transform 1s, filter 1s, opacity 0.5s ; 
+  /* individual times allows for the intial transition to have delay but not the theme change */
+ 
+}
+
+
+
+
 .read-the-docs {
   color: #888;
 }
