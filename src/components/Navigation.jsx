@@ -2,22 +2,28 @@ import React from 'react';
 import { useState } from 'react';
 import { useMediaQuery } from 'react-responsive';
 
-export const Navigation = ({ handleToggleTheme }) => {
+export const Navigation = ({ handleToggleTheme,handlePageChange }) => {
 	const isDesktop = useMediaQuery({ minWidth: 1024 });
+
+	const handlePage = () => {
+	const page = event.target.textContent;
+		console.log('clicked handlePage',page);
+		handlePageChange(page);
+	}
 
 	const handleTog = () => {
 		console.log('clicked handletog');
 		handleToggleTheme();
 	};
-	const [page, setPage] = useState(0);
+	
 	return (
 		<div className="decide">
 			{isDesktop ? (
 				<div className=" prose flex-auto navbar-start ">
-					<a><h3 className='m-0 inline p-2 hover:cursor-pointer hover:text-secondary-focus '>About</h3></a>
-					<a><h3 className='m-0 inline p-2 hover:cursor-pointer hover:text-secondary-focus'>Portfolio</h3></a>
-					<a><h3 className='m-0 inline p-2 hover:cursor-pointer hover:text-secondary-focus'>Contact</h3></a>
-					<a><h3 className='m-0 inline p-2 hover:cursor-pointer hover:text-secondary-focus'>Resume</h3></a>
+					<a><h3 onClick={handlePage} className='m-0 inline p-2 hover:cursor-pointer hover:text-secondary-focus '>About</h3></a>
+					<a><h3 onClick={handlePage} className='m-0 inline p-2 hover:cursor-pointer hover:text-secondary-focus'>Portfolio</h3></a>
+					<a><h3 onClick={handlePage} className='m-0 inline p-2 hover:cursor-pointer hover:text-secondary-focus'>Contact</h3></a>
+					<a><h3 onClick={handlePage} className='m-0 inline p-2 hover:cursor-pointer hover:text-secondary-focus'>Resume</h3></a>
 					<input 
 								type="checkbox"
 								className="toggle ms-3 mt-1 block w-12"
@@ -47,7 +53,7 @@ export const Navigation = ({ handleToggleTheme }) => {
 					</label>
 					<ul
 						tabIndex={0}
-						className="menu menu-sm dropdown-content mt-3 z-[1] p-2 shadow-lg bg-base-100 rounded-box w-52"
+						className="menu menu-sm dropdown-content mt-3 z-[1] p-2 shadow-lg bg-base-100 rounded-box w-39"
 					>
 						<li>
 							<a className='hover:text-secondary-focus'>About Me</a>

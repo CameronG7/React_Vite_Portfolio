@@ -2,7 +2,7 @@ import React from 'react';
 
 export const About = () => {
 	return (
-		<div className="prose container md:max-w-full   md:mx-auto flex-1 ">
+		<div className="prose prose-zinc md:max-w-full   md:mx-auto flex-1 ">
 			<div className="flex flex-col md:max-w-full items-center">
 				<h1 className="text-center mb-2">About Me</h1>
 				<img

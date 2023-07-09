@@ -7,7 +7,7 @@ export const Footer = () => {
 	return (
 		<footer className="footer md:p-4 bg-secondary-focus text-neutral-content place-items-stretch">
 			<div className="flex flex-auto md:flex-1 items-center justify-between py-1.5 md:py-0.5">
-				<p >Copyright © 2023 - All rights reserved</p>
+				<p className='ms-1'>Copyright © 2023 - All rights reserved</p>
 				<div className="flex justify-end space-x-4 ">
 					<a href="https://github.com/CameronG7">
 						<svg

@@ -1,12 +1,14 @@
 import React from 'react';
 import avatar from '../assets/avatar.jpg';
-import { Navigation } from './Navigation.jsx';
+import { Navigation } from './index.jsx';
 
-export const Header = ({ handleToggleTheme }) => {
+export const Header = ({ handleToggleTheme, handlePageChange }) => {
 	return (
 		<div className="navbar bg-base-100 md:max-w-full static justify-center">
 			<div className="flex-1 justify-start md:justify-start">
-				<Navigation handleToggleTheme={handleToggleTheme} />
+				<Navigation 
+				handlePageChange={handlePageChange}
+				handleToggleTheme={handleToggleTheme} />
 			</div>
 			<div className="flex-auto justify-center items-center">
 				<a
