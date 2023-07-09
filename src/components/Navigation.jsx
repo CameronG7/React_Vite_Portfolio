@@ -2,35 +2,63 @@ import React from 'react';
 import { useState } from 'react';
 import { useMediaQuery } from 'react-responsive';
 
-export const Navigation = ({ handleToggleTheme,handlePageChange }) => {
+export const Navigation = ({ handleToggleTheme, handlePageChange }) => {
 	const isDesktop = useMediaQuery({ minWidth: 1024 });
 
 	const handlePage = () => {
-	const page = event.target.textContent;
-		console.log('clicked handlePage',page);
+		const page = event.target.textContent;
+		console.log('clicked handlePage', page);
 		handlePageChange(page);
-	}
+	};
 
 	const handleTog = () => {
 		console.log('clicked handletog');
 		handleToggleTheme();
 	};
-	
+
 	return (
 		<div className="decide">
 			{isDesktop ? (
 				<div className=" prose flex-auto navbar-start ">
-					<a><h3 onClick={handlePage} className='m-0 inline p-2 hover:cursor-pointer hover:text-secondary-focus '>About</h3></a>
-					<a><h3 onClick={handlePage} className='m-0 inline p-2 hover:cursor-pointer hover:text-secondary-focus'>Portfolio</h3></a>
-					<a><h3 onClick={handlePage} className='m-0 inline p-2 hover:cursor-pointer hover:text-secondary-focus'>Contact</h3></a>
-					<a><h3 onClick={handlePage} className='m-0 inline p-2 hover:cursor-pointer hover:text-secondary-focus'>Resume</h3></a>
-					<input 
-								type="checkbox"
-								className="toggle ms-3 mt-1 block w-12"
-								onChange={handleTog}
-							/>
+					<a>
+						<h3
+							onClick={handlePage}
+							className="m-0 inline p-2 hover:cursor-pointer hover:text-secondary-focus "
+						>
+							About
+						</h3>
+					</a>
+					<a>
+						<h3
+							onClick={handlePage}
+							className="m-0 inline p-2 hover:cursor-pointer hover:text-secondary-focus"
+						>
+							Portfolio
+						</h3>
+					</a>
+					<a>
+						<h3
+							onClick={handlePage}
+							className="m-0 inline p-2 hover:cursor-pointer hover:text-secondary-focus"
+						>
+							Contact
+						</h3>
+					</a>
+					<a>
+						<h3
+							onClick={handlePage}
+							className="m-0 inline p-2 hover:cursor-pointer hover:text-secondary-focus"
+						>
+							Resume
+						</h3>
+					</a>
+					<input
+						type="checkbox"
+						className="toggle ms-3 mt-1 block w-12"
+						onChange={handleTog}
+					/>
 				</div>
-			) : (
+			) : (// if not desktop, render the dropdown menu
 				<div className="dropdown">
 					<label
 						tabIndex={0}
@@ -56,16 +84,36 @@ export const Navigation = ({ handleToggleTheme,handlePageChange }) => {
 						className="menu menu-sm dropdown-content mt-3 z-[1] p-2 shadow-lg bg-base-100 rounded-box w-39"
 					>
 						<li>
-							<a className='hover:text-secondary-focus'>About Me</a>
+							<a
+								onClick={handlePage}
+								className="hover:text-secondary-focus"
+							>
+								About Me
+							</a>
 						</li>
 						<li>
-							<a className='hover:text-secondary-focus'>Portfolio</a>
+							<a
+								onClick={handlePage}
+								className="hover:text-secondary-focus"
+							>
+								Portfolio
+							</a>
 						</li>
 						<li>
-							<a className='hover:text-secondary-focus'>Contact</a>
+							<a
+								onClick={handlePage}
+								className="hover:text-secondary-focus"
+							>
+								Contact
+							</a>
 						</li>
 						<li>
-							<a className='hover:text-secondary-focus'>Resume</a>
+							<a
+								onClick={handlePage}
+								className="hover:text-secondary-focus"
+							>
+								Resume
+							</a>
 						</li>
 						<li>
 							<input
