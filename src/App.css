@@ -54,6 +54,10 @@
   /* individual times allows for the intial transition to have delay but not the theme change */
  
 }
+iframe {
+  /* width: 50%; */
+  
+}
 
 
 
