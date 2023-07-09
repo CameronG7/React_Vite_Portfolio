@@ -14,11 +14,11 @@ export const Navigation = ({ handleToggleTheme }) => {
 		<div className="decide">
 			{isDesktop ? (
 				<div className=" prose flex-auto navbar-start ">
-					<a><h3 className='m-0 inline p-2 hover:cursor-pointer hover '>About</h3></a>
-					<a><h3 className='m-0 inline p-2 hover:cursor-pointer'>Portfolio</h3></a>
-					<a><h3 className='m-0 inline p-2 hover:cursor-pointer'>Contact</h3></a>
-					<a><h3 className='m-0 inline p-2 hover:cursor-pointer'>Resume</h3></a>
-					<input
+					<a><h3 className='m-0 inline p-2 hover:cursor-pointer hover:text-secondary-focus '>About</h3></a>
+					<a><h3 className='m-0 inline p-2 hover:cursor-pointer hover:text-secondary-focus'>Portfolio</h3></a>
+					<a><h3 className='m-0 inline p-2 hover:cursor-pointer hover:text-secondary-focus'>Contact</h3></a>
+					<a><h3 className='m-0 inline p-2 hover:cursor-pointer hover:text-secondary-focus'>Resume</h3></a>
+					<input 
 								type="checkbox"
 								className="toggle ms-3 mt-1 block w-12"
 								onChange={handleTog}
@@ -50,16 +50,16 @@ export const Navigation = ({ handleToggleTheme }) => {
 						className="menu menu-sm dropdown-content mt-3 z-[1] p-2 shadow-lg bg-base-100 rounded-box w-52"
 					>
 						<li>
-							<a>About Me</a>
+							<a className='hover:text-secondary-focus'>About Me</a>
 						</li>
 						<li>
-							<a>Portfolio</a>
+							<a className='hover:text-secondary-focus'>Portfolio</a>
 						</li>
 						<li>
-							<a>Contact</a>
+							<a className='hover:text-secondary-focus'>Contact</a>
 						</li>
 						<li>
-							<a>Resume</a>
+							<a className='hover:text-secondary-focus'>Resume</a>
 						</li>
 						<li>
 							<input

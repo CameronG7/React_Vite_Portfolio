@@ -16,12 +16,12 @@ export const About = () => {
 					applications and exploring the world of software development.
 					Currently, I am enrolled as a student in the UC Berkeley Full-Stack
 					Developer Bootcamp, where I am honing my skills and expanding my
-					knowledge in various technologies and frameworks.During my journey as
+					knowledge in various technologies and frameworks. During my journey as
 					a full-stack developer, I have been immersed in a wide range of
 					technologies, including HTML, CSS, JavaScript, React, Node.js,
 					Express, and databases like MongoDB. Through hands-on projects and
 					collaborative learning experiences, I am gaining valuable insights
-					into both front-end and back-end development.My goal is to leverage my
+					into both front-end and back-end development. My goal is to leverage my
 					acquired knowledge and skills to build robust and user-friendly web
 					applications. I thrive in problem-solving, enjoy learning new
 					technologies, and appreciate the power of teamwork in driving

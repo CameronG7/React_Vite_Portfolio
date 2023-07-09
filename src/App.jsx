@@ -17,7 +17,7 @@ function App() {
 	return (
 		<div
 			className="App flex flex-col min-h-screen  "
-			data-theme = { theme ? 'night' : 'light'}
+			data-theme = { theme ? 'night' : 'emerald'}
 		>
 			<Header handleToggleTheme={handleToggleTheme}/>
 			<About />
