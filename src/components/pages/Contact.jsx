@@ -12,29 +12,23 @@ export const Contact = () => {
 		const card = document.querySelector('.cardHidden');
 		observer.observe(card);
 
-		
-		
-		
 	}, []);
 
 	return (
 		<div className="prose mx-3 md:mx-auto my-2 ">
 			<h1 className=" justify-center text-base-content">Contact me </h1>
-			<p className="mx-1">
-				Sending me your information is under construction, in the mean time feel
-				free to contact me via <a href="mailto:cameron.gardner777@gmail.com">email</a> or my <a href="https://www.linkedin.com/in/cameron-gardner-29a235279/">linkedIn</a> 
-			</p>
+		
 			<div className="card cardHidden delay-500 mb-3.5 mx-auto md:w-96 bg-base-100 shadow-xl border border-base-content  ">
-				<div className="card-body ">
+				<div className="card-body p-0">
 					<h2 className="card-title">Name</h2>
 					<input
 						type="text"
-						className="bg-base-100 border rounded text"
+						className="bg-base-100 border rounded caret-secondary p-0.5"
 					/>
 					<h2 className="card-title">Email</h2>
 					<input
 						type="email"
-						className="bg-base-100 border rounded  "
+						className="bg-base-100 border rounded caret-secondary p-0.5"
 					/>
 					<h2 className="card-title">Message</h2>
 					<div className="border rounded-lg">
@@ -44,6 +38,10 @@ export const Contact = () => {
 					</div>
 				</div>
 			</div>
+			<p className="mx-1">
+				Sending me your information is under construction, in the mean time feel
+				free to contact me via <a href="mailto:cameron.gardner777@gmail.com">email</a> or my <a href="https://www.linkedin.com/in/cameron-gardner-29a235279/">linkedIn</a> 
+			</p>
 		</div>
 	);
 };
