@@ -1,5 +1,4 @@
 import React, { useEffect } from "react";
-import { useState } from "react";
 import  {Contact, About, Portfolio, Resume} from './pages/index.jsx';
 
 export const Shell = ({currentPage}) => {
