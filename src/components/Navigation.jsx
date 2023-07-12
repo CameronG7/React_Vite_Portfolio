@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useState,  } from 'react';
 import { useMediaQuery } from 'react-responsive';
 
 export const Navigation = ({ handleToggleTheme, handlePageChange }) => {
@@ -6,6 +6,25 @@ export const Navigation = ({ handleToggleTheme, handlePageChange }) => {
 
 	const handlePage = () => {
 		const page = event.target.textContent;
+
+		if (isDesktop) {
+			const headers = document.querySelectorAll('h3');
+			headers.forEach((header) => {
+				header.classList.remove('text-secondary-focus');
+				if (header.textContent === page) {
+					header.classList.add('text-secondary-focus');
+				}
+			});
+		} else {
+			const dropOptions = document.querySelectorAll('a');
+			dropOptions.forEach((option) => {
+				option.classList.remove('text-secondary-focus');
+				if (option.textContent === page) {
+					option.classList.add('text-secondary-focus');
+				}
+			});
+
+		}
 		console.log('clicked handlePage', page);
 		handlePageChange(page);
 	};
@@ -57,7 +76,8 @@ export const Navigation = ({ handleToggleTheme, handlePageChange }) => {
 						onChange={handleTog}
 					/>
 				</div>
-			) : (// if not desktop, render the dropdown menu
+			) : (
+				// if not desktop, render the dropdown menu
 				<div className="dropdown">
 					<label
 						tabIndex={0}

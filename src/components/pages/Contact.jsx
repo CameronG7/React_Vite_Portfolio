@@ -59,7 +59,7 @@ export const Contact = () => {
 	}, []);
 
 	return (
-		<div className="prose mx-3 md:mx-auto my-2 ">
+		<div className="prose mx-3 md:mx-auto my-2 flex-1">
 			<h1 className=" justify-center text-base-content">Contact me </h1>
 
 			<div className="card cardHidden delay-500 mb-3.5 mx-auto md:w-96 bg-base-100 shadow-xl border border-base-content  ">
