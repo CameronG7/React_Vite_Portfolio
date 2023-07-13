@@ -7,7 +7,7 @@ export const About = () => {
 				<h1 className="text-center mb-2">About Me</h1>
 				<img
 					className="mx-auto my-3 w-24 md:w-48 h-24 md:h-48 rounded-full"
-					src="src/assets/avatar.jpg"
+					src="./avatar.jpg"
 					alt="profile"
 				/>
 				<p className="mx-auto px-5 text-center text-sm md:text-xl max-w-sm md:max-w-xl">
