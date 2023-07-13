@@ -49,7 +49,7 @@ export const Resume = () => {
 						</button>{' '}
 					</a>
 					<a
-						href="/Resume_Cameron_Gardner.pdf"
+						href={pdf}
 						download="Cameron-Gardner-Resume"
 						target="_blank"
 						rel="noreferrer"
