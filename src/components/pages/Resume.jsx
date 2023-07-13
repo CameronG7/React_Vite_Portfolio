@@ -1,5 +1,6 @@
 import React from 'react';
 import { useMediaQuery } from 'react-responsive';
+import pdf from '../../../Resume_Cameron_Gardner.pdf';
 
 const viewUrl =
 	'https://docs.google.com/document/d/e/2PACX-1vT16VJMyQET9S-PNRopSgsniAWHWNm-5sZ-ic8e7-Brff8jx9HVuAnbI6xiyWZnjA/pub';
@@ -27,7 +28,7 @@ export const Resume = () => {
 						src="https://docs.google.com/document/d/e/2PACX-1vT16VJMyQET9S-PNRopSgsniAWHWNm-5sZ-ic8e7-Brff8jx9HVuAnbI6xiyWZnjA/pub?embedded=true"
 					></iframe>
 						<a
-						href="/Resume_Cameron_Gardner.pdf"
+						href={pdf}
 						download="Cameron-Gardner-Resume"
 						target="_blank"
 						rel="noreferrer"
