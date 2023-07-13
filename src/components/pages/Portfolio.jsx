@@ -1,56 +1,56 @@
-import React from "react";
-import { useState } from "react";
-import { useMediaQuery } from "react-responsive";
-import { Project } from "./projects/Project";
+import React from 'react';
+import { Project } from './projects/Project';
 
 export const Portfolio = () => {
-  return(
-    <div className="h-96 carousel carousel-vertical rounded-box min-h-screen">
-  <div className="carousel-item h-full">
-    <img src="https://daisyui.com/images/stock/photo-1559703248-dcaaec9fab78.jpg" />
-  </div> 
-  <div className="carousel-item h-full">
-    <img src="https://daisyui.com/images/stock/photo-1565098772267-60af42b81ef2.jpg" />
-  </div> 
-  <div className="carousel-item h-full">
-    <img src="https://daisyui.com/images/stock/photo-1572635148818-ef6fd45eb394.jpg" />
-  </div> 
-  <div className="carousel-item h-full">
-    <img src="https://daisyui.com/images/stock/photo-1494253109108-2e30c049369b.jpg" />
-  </div> 
-  <div className="carousel-item h-full">
-    <img src="https://daisyui.com/images/stock/photo-1550258987-190a2d41a8ba.jpg" />
-  </div> 
-  <div className="carousel-item h-full">
-    <img src="https://daisyui.com/images/stock/photo-1559181567-c3190ca9959b.jpg" />
-  </div> 
-  <div className="carousel-item h-full">
-    <img src="https://daisyui.com/images/stock/photo-1601004890684-d8cbf643f5f2.jpg" />
-  </div>
-</div>
-//   <div className="carousel w-full">
-//  <Project/>
-//   <div id="slide2" className="carousel-item relative w-full">
-//     <img src="src/assets/secondCollab.png" className="w-full" />
-//     <div className="absolute flex justify-between transform -translate-y-1/2 left-5 right-5 top-1/2">
-//       <a href="#slide1" className="btn btn-circle">❮</a> 
-//       <a href="#slide1" className="btn btn-circle">❯</a>
-//     </div>
-//   </div> 
-//   {/* <div id="slide3" className="carousel-item relative w-full">
-//     <img src="src/assets/rps-cottonbro-studio-6153741.jpg" className="w-full" />
-//     <div className="absolute flex justify-between transform -translate-y-1/2 left-5 right-5 top-1/2">
-//       <a href="#slide2" className="btn btn-circle">❮</a> 
-//       <a href="#slide4" className="btn btn-circle">❯</a>
-//     </div>
-//   </div>  */}
-//   {/* <div id="slide4" className="carousel-item relative w-full">
-//     <img src="/images/stock/photo-1665553365602-b2fb8e5d1707.jpg" className="w-full" />
-//     <div className="absolute flex justify-between transform -translate-y-1/2 left-5 right-5 top-1/2">
-//       <a href="#slide3" className="btn btn-circle">❮</a> 
-//       <a href="#slide1" className="btn btn-circle">❯</a>
-//     </div>
-//   </div> */}
-// </div>
-)
-}
+	return (
+		<div className="h-96 carousel carousel-vertical rounded-box min-h-screen">
+			{/* reel */}
+			<Project
+				imageUrl="src/assets/Portfolio/reel.png"
+				hasDeployedApp 
+				githubRepoUrl="https://www.github.com/CameronG7/ReelReviews"
+				deployedAppUrl="https://sheltered-reef-22263.herokuapp.com/"
+				projectName="Reel Reviews"
+			/>
+			{/* jate */}
+			<Project
+				imageUrl="src/assets/Portfolio/JATE.png"
+				hasDeployedApp 
+				githubRepoUrl="https://www.github.com/CameronG7/JATE_PWA"
+				deployedAppUrl="https://salty-temple-36941-0e4bb5ef543d.herokuapp.com/"
+				projectName="JATE PWA"
+			/>
+			<Project
+				imageUrl="src/assets/Portfolio/emp_db.png"
+				hasDeployedApp = {false} 
+				githubRepoUrl="https://www.github.com/CameronG7/employeeData_mySQL"
+				deployedAppUrl="https://www.github.com/CameronG7"
+				projectName="MYSQL Employee Tracker"
+			/>
+			<Project
+				imageUrl="src/assets/Portfolio/weather.png"
+				hasDeployedApp 
+				githubRepoUrl="https://www.github.com/CameronG7/5_day_weather"
+				deployedAppUrl="https://camerong7.github.io/5_day_weather/"
+				projectName="3rd Party API Weather Dashboard"
+			/>
+			<Project
+				imageUrl="src/assets/Portfolio/social api.png"
+				hasDeployedApp = {false}
+				githubRepoUrl="https://github.com/CameronG7/social_media_api"
+				deployedAppUrl="https://www.github.com/CameronG7"
+				projectName="MongoDB Social Network API"
+			/>
+			<Project
+				imageUrl="src/assets/Portfolio/backend.jpg"
+				hasDeployedApp = {false}
+				githubRepoUrl="https://www.github.com/CameronG7/ORM_eCommerce_Backend"
+				deployedAppUrl="https://www.github.com/CameronG7"
+				projectName="Sequelize E-Commerce Backend"
+			/>
+
+	
+		</div>
+		
+	);
+};

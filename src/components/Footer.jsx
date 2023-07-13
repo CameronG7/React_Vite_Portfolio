@@ -1,8 +1,6 @@
 import React from 'react';
-import { useMediaQuery } from 'react-responsive';
 
 export const Footer = () => {
-	const isDesktop = useMediaQuery({ minWidth: 1024 });
 
 	return (
 		<footer className="footer md:p-4 bg-secondary-focus text-neutral-content place-items-stretch">
@@ -48,5 +46,4 @@ export const Footer = () => {
 	);
 };
 
-// export default Footer;
-// max-w-md md:max-w-full
+

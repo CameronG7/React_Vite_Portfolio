@@ -1,23 +1,46 @@
-import React from "react";
-import { useState } from "react";
+import React from 'react';
 
-import { useMediaQuery } from "react-responsive";
-
-
-
-export const Project = (props) => {
-
-  return(
-    
-    <div id="slide1" className="carousel-item relative w-full">
-      <img src="https://user-images.githubusercontent.com/122588135/228051187-c4fcc27b-4c28-42aa-aa6d-4ebebd7e46a0.png" className="w-full" />
-      <div className="absolute flex justify-between transform -translate-y-1/2 left-5 right-5 top-1/2">
-        <a href="#slide2" className="btn btn-circle">❮</a> 
-        <a href="#slide2" className="btn btn-circle">❯</a>
+export const Project = ({
+	imageUrl,
+	hasDeployedApp,
+	githubRepoUrl,
+	deployedAppUrl,
+	projectName,
+}) => {
+	return (
+		<div className="carousel-item h-4/5">
+      <div className="card mb-3.5 mx-auto bg-base-100  flex flex-col justify-between">
+        <div className="flex-grow">
+          <img
+            className="object-cover h-full rounded"
+            src={imageUrl}
+            alt="Project"
+          />
+        </div>
+        <div className="card-body">
+          <h2 className="card-title justify-center">{projectName}</h2>
+          <div className="card-actions justify-center">
+            <a
+              href={githubRepoUrl}
+              target="_blank"
+              rel="noopener noreferrer"
+              className="btn btn-active btn-secondary hover:text-primary"
+            >
+              GitHub Repo
+            </a>
+            {hasDeployedApp && (
+              <a
+                href={deployedAppUrl}
+                target="_blank"
+                rel="noopener noreferrer"
+                className="btn btn-accent"
+              >
+                Deployed App
+              </a>
+            )}
+          </div>
+        </div>
       </div>
-    </div> 
-   
-  
-  )
-
-}
+    </div>
+	);
+};

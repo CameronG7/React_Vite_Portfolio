@@ -5,8 +5,8 @@ export const Contact = () => {
 	const [email, setEmail] = useState('');
 	const [message, setMessage] = useState('');
 	const [errorName, setErrorName] = useState('');
-	const [errorEmail, setErrorEmail] = useState('')
-	const [errorMessage, setErrorMessage] = useState('')
+	const [errorEmail, setErrorEmail] = useState('');
+	const [errorMessage, setErrorMessage] = useState('');
 
 	const validateEmail = () => {
 		console.log('validateEmail');
@@ -21,31 +21,30 @@ export const Contact = () => {
 	};
 
 	const handleBlur = (fieldName, value) => {
-    if (value === '') {
-      switch (fieldName) {
-        case 'name':
-          setErrorName('FIELD IS REQUIRED.');
-          break;
-        case 'message':
-          setErrorMessage('FIELD IS REQUIRED.');
-          break;
-        default:
-          break;
-      }
-    } else {
-      switch (fieldName) {
-        
-        case 'name':
-          setErrorName('');
-          break;
-        case 'message':
-          setErrorMessage('');
-          break;
-        default:
-          break;
-      }
-    }
-  };
+		if (value === '') {
+			switch (fieldName) {
+				case 'name':
+					setErrorName('FIELD IS REQUIRED.');
+					break;
+				case 'message':
+					setErrorMessage('FIELD IS REQUIRED.');
+					break;
+				default:
+					break;
+			}
+		} else {
+			switch (fieldName) {
+				case 'name':
+					setErrorName('');
+					break;
+				case 'message':
+					setErrorMessage('');
+					break;
+				default:
+					break;
+			}
+		}
+	};
 
 	useEffect(() => {
 		const observer = new IntersectionObserver((entries) => {
@@ -94,20 +93,17 @@ export const Contact = () => {
 
 					<label className="label p-0 mt-10">
 						<h2 className="card-title mt-0">Message</h2>
-						<span className="label-text-alt text-error" >{errorMessage}</span>
+						<span className="label-text-alt text-error">{errorMessage}</span>
 					</label>
-					{/* <div className="border  rounded-lg"> */}
-						{/*wrap textarea in a div so that it can have a similar border */}
-						<textarea
-							className="border rounded-lg focus:outline-secondary p-0.5 bg-base-100 w-full max-w-xs "
-							placeholder='Message'
-							required
-							onChange={(e) => setMessage(e.target.value)}
-							onBlur={() => handleBlur('message', message)}
-							value={message}
-						></textarea>
-					{/* </div> */}
-				
+
+					<textarea
+						className="border rounded-lg focus:outline-secondary p-0.5 bg-base-100 w-full max-w-xs "
+						placeholder="Message"
+						required
+						onChange={(e) => setMessage(e.target.value)}
+						onBlur={() => handleBlur('message', message)}
+						value={message}
+					></textarea>
 				</div>
 			</div>
 			<p className="mx-1 mb-4">
