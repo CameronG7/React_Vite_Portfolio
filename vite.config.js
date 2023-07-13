@@ -9,5 +9,5 @@ export default defineConfig({
       src: "/src",
     },
   },
-  base: "/",
+  base: "/React_Vite_Portfolio",
 })
