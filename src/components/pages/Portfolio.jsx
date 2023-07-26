@@ -4,6 +4,14 @@ import { Project } from './projects/Project';
 export const Portfolio = () => {
 	return (
 		<div className="h-96 carousel carousel-vertical rounded-box min-h-screen">
+			{/* grow */}
+			<Project
+				imageUrl="./grow.png"
+				hasDeployedApp={true}
+				githubRepoUrl="https://github.com/CameronG7/G.R.O.W"
+				deployedAppUrl="https://grow-react-787be2a9ebf7.herokuapp.com/"
+				projectName="G.R.O.W. MERN App"
+			/>
 			{/* reel */}
 			<Project
 				imageUrl="./reel.png"
@@ -41,13 +49,7 @@ export const Portfolio = () => {
 				deployedAppUrl="https://www.github.com/CameronG7"
 				projectName="MongoDB Social Network API"
 			/>
-			<Project
-				imageUrl="./backend.jpg"
-				hasDeployedApp={false}
-				githubRepoUrl="https://www.github.com/CameronG7/ORM_eCommerce_Backend"
-				deployedAppUrl="https://www.github.com/CameronG7"
-				projectName="Sequelize E-Commerce Backend"
-			/>
+			
 		</div>
 	);
 };
