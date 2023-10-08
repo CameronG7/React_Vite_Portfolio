@@ -1,4 +1,5 @@
-import React, { useEffect, useState } from 'react';
+import React, { useEffect, useRef, useState } from 'react';
+import emailjs from "@emailjs/browser";
 
 export const Contact = () => {
 	const [name, setName] = useState('');
@@ -7,6 +8,14 @@ export const Contact = () => {
 	const [errorName, setErrorName] = useState('');
 	const [errorEmail, setErrorEmail] = useState('');
 	const [errorMessage, setErrorMessage] = useState('');
+
+	const form = useRef();
+
+	const handleSendEmail = (e) => {
+		e.preventDefault();
+
+		
+	}
 
 	const validateEmail = () => {
 		console.log('validateEmail');
@@ -46,6 +55,35 @@ export const Contact = () => {
 		}
 	};
 
+	const handleFormSubmit = (e) => {
+		e.preventDefault();
+		if (validateEmail()) {
+			console.log('valid email');
+		} else {
+			console.log('invalid email');
+		}
+		
+		emailjs
+			.sendForm(
+				'service_3el01yj',
+				'contact_form',
+				form.current,
+				'5-W8xiLmpns6DGxah'
+			)
+			.then(
+				(result) => {
+					console.log(result.text);
+				},
+				(error) => {
+					console.log(error.text);
+				}
+			);
+
+		setEmail('');
+		setName('');
+		setMessage('');
+	}
+
 	useEffect(() => {
 		const observer = new IntersectionObserver((entries) => {
 			entries.forEach((entry) => {
@@ -62,13 +100,18 @@ export const Contact = () => {
 			<h1 className=" justify-center text-base-content">Contact me </h1>
 
 			<div className="card cardHidden delay-500 mb-3.5 mx-auto md:w-96 bg-base-100 shadow-xl border border-base-content  ">
-				<div className="card-body p-0 md:p-7">
+				<form 
+				className="card-body p-0 md:p-7"
+				ref={form}
+				onSubmit={handleFormSubmit}
+				>
 					<label className="label p-0 mt-7">
 						<h2 className="card-title mt-0">Name</h2>
 						<span className="label-text-alt text-error">{errorName}</span>
 					</label>
 					<input
 						required
+						name='user_name'
 						type="text"
 						placeholder="Name"
 						className="bg-base-100 border rounded focus:outline-green-300  p-0.5"
@@ -82,6 +125,7 @@ export const Contact = () => {
 						<span className="label-text-alt text-error">{errorEmail}</span>
 					</label>
 					<input
+						name='user_email'
 						type="email"
 						placeholder="Email"
 						className="bg-base-100 border rounded caret-secondary p-0.5"
@@ -97,6 +141,7 @@ export const Contact = () => {
 					</label>
 
 					<textarea
+					  name='message'
 						className="border rounded-lg focus:outline-secondary p-0.5 bg-base-100 w-full max-w-xs "
 						placeholder="Message"
 						required
@@ -104,7 +149,13 @@ export const Contact = () => {
 						onBlur={() => handleBlur('message', message)}
 						value={message}
 					></textarea>
-				</div>
+					<input
+						type="submit"
+						value="Send"
+						className="btn btn-primary mt-5"
+						onClick={handleFormSubmit}
+					/>
+				</form>
 			</div>
 			<p className="mx-1 mb-4">
 				Sending me your information is under construction, in the mean time feel

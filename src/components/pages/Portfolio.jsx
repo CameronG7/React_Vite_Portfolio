@@ -49,7 +49,6 @@ export const Portfolio = () => {
 				deployedAppUrl="https://www.github.com/CameronG7"
 				projectName="MongoDB Social Network API"
 			/>
-			
 		</div>
 	);
 };
