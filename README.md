@@ -21,7 +21,7 @@ Click the above link to see more
 
 ## Credits
 
-This app was built using React, Vite, Tailwind CSS, and DaisyUI
+This app was built using React, Vite, Tailwind CSS, emailJS and DaisyUI
 
 ## License
 
