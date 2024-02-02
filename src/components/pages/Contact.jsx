@@ -155,14 +155,7 @@ export const Contact = () => {
 					/>
 				</form>
 			</div>
-			<p className="mx-1 mb-4">
-				Sending me your information is under construction, in the mean time feel
-				free to contact me via{' '}
-				<a href="mailto:cameron.gardner777@gmail.com">email</a> or my{' '}
-				<a href="https://www.linkedin.com/in/cameron-gardner-29a235279/">
-					linkedIn
-				</a>
-			</p>
+			
 		</div>
 	);
 };
